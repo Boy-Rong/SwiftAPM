@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'iOS-APM_Example' do
+  pod 'iOS-APM', :path => '../'
+
+  target 'iOS-APM_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+  end
+end
