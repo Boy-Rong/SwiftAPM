@@ -22,7 +22,7 @@ pod 'iOS-APM'
 
 ## Author
 
-495929699g@gmail.com, rongheng@mucang.com
+rongshao, rongheng@mucang.com
 
 ## License
 

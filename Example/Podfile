@@ -2,10 +2,39 @@ use_frameworks!
 
 target 'iOS-APM_Example' do
   pod 'iOS-APM', :path => '../'
+  pod 'ThreadBacktrace', :path => '../../ThreadBacktrace'
+  
+  pod 'GodEye', :path => '../../GodEye'
+
+  pod "AppBaseKit", :path => '../../EyePod/AppBaseKit'
+  pod "Log4G", :path => '../../EyePod/Log4G'
+  pod "AppSwizzle", :path => '../../EyePod/AppSwizzle'
+  pod "AssistiveButton", :path => '../../EyePod/AssistiveButton'
+  pod "ASLEye", :path => '../../EyePod/ASLEye'
+  pod "CrashEye", :path => '../../EyePod/CrashEye'
+  pod "ANREye", :path => '../../EyePod/ANREye'
+  pod "SystemEye", :path => '../../EyePod/SystemEye'
+  pod "NetworkEye.swift", :path => '../../EyePod/NetworkEye'
+  pod "LeakEye", :path => '../../EyePod/LeakEye'
+
+  pod "FileBrowser", :path => '../../EyePod/FileBrowser'
+  pod "SwViewCapture"
+  pod "SQLite.swift"
+  pod "ESPullToRefresh"
+  
+  pod 'LookinServer'
 
   target 'iOS-APM_Tests' do
     inherit! :search_paths
 
     pod 'FBSnapshotTestCase' , '~> 2.1.4'
+  end
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '5.0'
+    end
   end
 end

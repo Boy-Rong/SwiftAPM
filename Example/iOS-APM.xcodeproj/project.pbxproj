@@ -32,7 +32,7 @@
 		434EF967AC5E9D8B7BAA5E12 /* Pods_iOS_APM_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_APM_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		471EEB00F0DB5D840D336270 /* Pods-iOS-APM_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-APM_Tests.debug.xcconfig"; path = "Target Support Files/Pods-iOS-APM_Tests/Pods-iOS-APM_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		47C024FFC7E278E80CE3C543 /* Pods_iOS_APM_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_APM_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		484051A6FF9711ED7651F4C2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		484051A6FF9711ED7651F4C2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* iOS-APM_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-APM_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,8 +45,8 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6714EBDAA6DCF0C80507B957 /* Pods-iOS-APM_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-APM_Example.release.xcconfig"; path = "Target Support Files/Pods-iOS-APM_Example/Pods-iOS-APM_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6A54F73EB97399E8C3BE2A01 /* Pods-iOS-APM_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-APM_Tests.release.xcconfig"; path = "Target Support Files/Pods-iOS-APM_Tests/Pods-iOS-APM_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		89B2FF6088D2F20B891C91F9 /* iOS-APM.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = "iOS-APM.podspec"; path = "../iOS-APM.podspec"; sourceTree = "<group>"; };
-		C14E7D0C27D402CA0A0B3C38 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		89B2FF6088D2F20B891C91F9 /* iOS-APM.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "iOS-APM.podspec"; path = "../iOS-APM.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C14E7D0C27D402CA0A0B3C38 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +156,6 @@
 				471EEB00F0DB5D840D336270 /* Pods-iOS-APM_Tests.debug.xcconfig */,
 				6A54F73EB97399E8C3BE2A01 /* Pods-iOS-APM_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,6 +227,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -292,11 +292,45 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-iOS-APM_Example/Pods-iOS-APM_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/iOS-APM/iOS_APM.framework",
+				"${BUILT_PRODUCTS_DIR}/ANREye/ANREye.framework",
+				"${BUILT_PRODUCTS_DIR}/ASLEye/ASLEye.framework",
+				"${BUILT_PRODUCTS_DIR}/AppBaseKit/AppBaseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/AppSwizzle/AppSwizzle.framework",
+				"${BUILT_PRODUCTS_DIR}/AssistiveButton/AssistiveButton.framework",
+				"${BUILT_PRODUCTS_DIR}/CrashEye/CrashEye.framework",
+				"${BUILT_PRODUCTS_DIR}/ESPullToRefresh/ESPullToRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/FileBrowser/FileBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/GodEye/GodEye.framework",
+				"${BUILT_PRODUCTS_DIR}/LeakEye/LeakEye.framework",
+				"${BUILT_PRODUCTS_DIR}/Log4G/Log4G.framework",
+				"${PODS_ROOT}/LookinServer/LookinServer.framework",
+				"${BUILT_PRODUCTS_DIR}/NetworkEye.swift/NetworkEye.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${BUILT_PRODUCTS_DIR}/SwViewCapture/SwViewCapture.framework",
+				"${BUILT_PRODUCTS_DIR}/SystemEye/SystemEye.framework",
+				"${BUILT_PRODUCTS_DIR}/ThreadBacktrace/ThreadBacktrace.framework",
+				"${BUILT_PRODUCTS_DIR}/iOS-APM/BRAPM.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOS_APM.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ANREye.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ASLEye.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppBaseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppSwizzle.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AssistiveButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CrashEye.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESPullToRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FileBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GodEye.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LeakEye.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log4G.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LookinServer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NetworkEye.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwViewCapture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SystemEye.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ThreadBacktrace.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BRAPM.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -503,7 +537,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -518,7 +552,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
