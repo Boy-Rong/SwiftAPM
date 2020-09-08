@@ -1,5 +1,6 @@
 import XCTest
-import BRAPM
+//import BRAPM
+import iOS_APM_Example
 
 class Tests: XCTestCase {
     

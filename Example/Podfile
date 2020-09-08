@@ -23,12 +23,7 @@ target 'iOS-APM_Example' do
   pod "ESPullToRefresh"
   
   pod 'LookinServer'
-
-  target 'iOS-APM_Tests' do
-    inherit! :search_paths
-
-    pod 'FBSnapshotTestCase' , '~> 2.1.4'
-  end
+  
 end
 
 post_install do |installer|

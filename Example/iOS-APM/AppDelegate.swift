@@ -8,6 +8,7 @@
 
 import UIKit
 import GodEye
+import BRAPM
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
     
-        GodEye.makeEye(with: self.window!)
+        let configuration = Configuration()
+        configuration.command.add(command: "test", description: "test command") { () -> (String) in
+            return "this is test command result"
+        }
+        configuration.command.add(command: "info", description: "print test info") { () -> (String) in
+            return "info"
+        }
+        
+        GodEye.makeEye(with: self.window!, configuration: configuration)
+        BRAPM.Crash.startMonitor()
         
         return true
     }

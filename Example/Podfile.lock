@@ -6,11 +6,6 @@ PODS:
   - AssistiveButton (1.2.0)
   - CrashEye (1.2.0)
   - ESPullToRefresh (2.9.3)
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
   - FileBrowser (1.0.0)
   - GodEye (1.2.0):
     - ANREye
@@ -28,6 +23,12 @@ PODS:
     - SwViewCapture
     - SystemEye
   - iOS-APM (0.1.0):
+    - GodEye
+    - iOS-APM/Crash (= 0.1.0)
+    - iOS-APM/Global (= 0.1.0)
+  - iOS-APM/Crash (0.1.0):
+    - GodEye
+  - iOS-APM/Global (0.1.0):
     - GodEye
     - ThreadBacktrace
   - LeakEye (1.2.0):
@@ -51,7 +52,6 @@ DEPENDENCIES:
   - AssistiveButton (from `../../EyePod/AssistiveButton`)
   - CrashEye (from `../../EyePod/CrashEye`)
   - ESPullToRefresh
-  - FBSnapshotTestCase (~> 2.1.4)
   - FileBrowser (from `../../EyePod/FileBrowser`)
   - GodEye (from `../../GodEye`)
   - iOS-APM (from `../`)
@@ -67,7 +67,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - ESPullToRefresh
-    - FBSnapshotTestCase
     - LookinServer
     - SQLite.swift
     - SwViewCapture
@@ -110,10 +109,9 @@ SPEC CHECKSUMS:
   AssistiveButton: eb9dced394fcdee4acdd5c1b63e8846ab72f6d37
   CrashEye: 89d1ca174f0ef3ceeb27152f578c0a61667ba799
   ESPullToRefresh: 0d68daa602b343c81753a1b95e09fd0bfcddfd40
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   FileBrowser: 42fe0e5dbb9602f13c6f7f742f4a4193b018eafd
   GodEye: bd756cf1c47d86e9f43e6af4af7b0858e7d6c0ab
-  iOS-APM: 032d51bdde9c8574a0c42c5e0c1f16414e84c8e3
+  iOS-APM: f497b07512113ee68a2dbce1f2ec447c39d89e56
   LeakEye: 2382ea37ddb10cda7556dbe541b81e0b4df7fdcb
   Log4G: b05af86e6a876d911d97dca38f88e91eec7c3ebc
   LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
@@ -123,6 +121,6 @@ SPEC CHECKSUMS:
   SystemEye: 06449d1fab0256231021e83789259a42d69689f5
   ThreadBacktrace: dda685730ac100e2639a6e3be1d2845c1c0ffe7a
 
-PODFILE CHECKSUM: 4ce7f832c724efbf55f0942eb5b2b91b2406493c
+PODFILE CHECKSUM: d3da0aeef3b958336215a57e7539956042bf3e84
 
 COCOAPODS: 1.8.4
