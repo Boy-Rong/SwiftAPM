@@ -161,10 +161,14 @@ struct SignalHandler: CrashHandlerabel {
          */
         let result = sigaction(signal, &action, &oldAction)
         if (result != 0) {
-            print("-------> signal handler 设置错误")
+            print("-------> signal : \(Crash.Signal(rawValue: signal)!) handler 设置错误")
         }
         
-        return has_sa_sigaction(oldAction) ? (signal, oldAction.sa_sigaction) : nil
+        guard let sa_sigaction = oldAction.sa_sigaction else {
+            return nil
+        }
+        
+        return (signal, sa_sigaction)
     }
     
 }
@@ -276,13 +280,19 @@ extension Crash {
 extension sigaction {
     
     /// signal 处理函数
-    var sa_sigaction: SignalClosure {
+    var sa_sigaction: SignalClosure? {
         get {
+            guard has_sa_sigaction(self) else {
+                return nil
+            }
             return __sigaction_u.__sa_sigaction
         }
         
         set {
-            __sigaction_u.__sa_sigaction = newValue
+            guard let value = newValue else {
+                return
+            }
+            __sigaction_u.__sa_sigaction = value
         }
     }
     
