@@ -104,14 +104,15 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
 // MARK: - DemoModel
 class DemoModel: NSObject {
     
-    private(set) var title: String!
+    private(set) var title: String
     
-    private(set) var action: (()->())!
+    private(set) var action: (()->()) = {}
     
     init(title:String,action:@escaping ()->()) {
-        super.init()
         self.title = title
         self.action = action
+        
+        super.init()
     }
 }
 
@@ -137,8 +138,13 @@ class DemoModelFactory: NSObject {
         models.append(model)
         
         model = DemoModel(title: "Signal Crash") {
-            var a = [String]()
-            _ = a[2]
+//            var a = [String]()
+//            _ = a[2]
+            
+            var b: Int? = nil
+            print(b!)
+            
+//            kill(getpid(), SIGABRT)
         }
         models.append(model)
         
