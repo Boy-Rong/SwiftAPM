@@ -12,6 +12,8 @@ import Darwin
 // MARK: - Type
 typealias SignalClosure = (@convention(c) (Int32, UnsafeMutablePointer<__siginfo>?, UnsafeMutableRawPointer?) -> Void)
 
+typealias SignalSwiftClosure = (Int32, UnsafeMutablePointer<__siginfo>?, UnsafeMutableRawPointer?) -> Void
+
 typealias ExceptionClosure = @convention(c) (NSException) -> Swift.Void
 
 // MARK: - 崩溃处理协议
@@ -40,26 +42,26 @@ struct ExceptionHandler: CrashHandlerabel {
     private static var app_old_exceptionHandler : ExceptionClosure?
     
     private static let RecieveException: ExceptionClosure = { exteption in
-        // 先执行 oldHandle
+        
+        // 先执行 new handler
+        if Crash.isOpen {
+            // 获取当前线程堆栈
+            let callStack = exteption.callStackSymbols.joined(separator: "\n")
+            let reason = exteption.reason ?? ""
+            let name = exteption.name
+            let model = Crash.Data(type:.exception,
+                                   name:name.rawValue,
+                                   reason:reason,
+                                   appinfo:App.info,
+                                   callStack:callStack)
+            // save crash
+            saveCrash(model)
+        }
+        
+        // 在执行 oldHandle
         if let oldHandle = app_old_exceptionHandler {
             oldHandle(exteption)
         }
-        
-        guard Crash.isOpen else {
-            return
-        }
-        
-        // 获取当前线程堆栈
-        let callStack = exteption.callStackSymbols.joined(separator: "\n")
-        let reason = exteption.reason ?? ""
-        let name = exteption.name
-        let model = Crash.Data(type:.exception,
-                               name:name.rawValue,
-                               reason:reason,
-                               appinfo:App.info,
-                               callStack:callStack)
-        // save crash
-        saveCrash(model)
         
         // 杀死进程 防止Crash 被继续捕获
         clearCrashHandler()
@@ -91,31 +93,28 @@ struct SignalHandler: CrashHandlerabel {
     
     /// signalHandler
     private static let RecieveSignal: SignalClosure = { signal, info, context in
-        // 先执行 old signal handler
+
+        // 先处理自己 handle
+        if Crash.isOpen, let signal = Crash.Signal(rawValue: signal) {
+            // 获取当前线程堆栈
+            let callStack = BacktraceOfCurrentThread().info()
+            let reason = "Signal \(signal.name)(\(signal)) was raised.\n"
+
+            let model = Crash.Data(type:.signal,
+                                   name:signal.name,
+                                   reason:reason,
+                                   appinfo:App.info,
+                                   callStack:callStack)
+
+            // save crash
+            saveCrash(model)
+        }
+
+        // 在执行 old signal handler
         if let oldHandler = app_old_signalHandler[signal] {
             oldHandler(signal, info, context)
         }
-        
-        guard
-            Crash.isOpen,
-            let signal = Crash.Signal(rawValue: signal)
-        else {
-            return
-        }
-        
-        // 获取当前线程堆栈
-        let callStack = BacktraceOfCurrentThread().info()
-        let reason = "Signal \(signal.name)(\(signal)) was raised.\n"
-        
-        let model = Crash.Data(type:.signal,
-                               name:signal.name,
-                               reason:reason,
-                               appinfo:App.info,
-                               callStack:callStack)
-        
-        // save crash
-        saveCrash(model)
-        
+
         // 杀死进程 房子Crash 被继续捕获
         clearCrashHandler()
         App.kill()
@@ -161,7 +160,7 @@ struct SignalHandler: CrashHandlerabel {
          */
         let result = sigaction(signal, &action, &oldAction)
         if (result != 0) {
-            print("-------> signal : \(Crash.Signal(rawValue: signal)!) handler 设置错误")
+            log("signal: \(Crash.Signal(rawValue: signal)!) handler 设置错误")
         }
         
         guard let sa_sigaction = oldAction.sa_sigaction else {

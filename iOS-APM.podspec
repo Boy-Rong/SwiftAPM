@@ -42,6 +42,4 @@ TODO: Add long description of the pod here.
   #   'iOS-APM' => ['iOS-APM/Assets/*.png']
   # }
   
-   s.dependency 'GodEye'
-   
 end
