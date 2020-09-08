@@ -20,19 +20,28 @@ TODO: Add long description of the pod here.
   s.author           = { 'rongshao' => 'rongheng@mucang.com' }
   s.source           = { :git => 'https://github.com/Boy-Rong/iOS-APM.git', :tag => s.version.to_s }
   
-  s.module_name   = 'BRAPM'
   s.ios.deployment_target = '8.0'
-
-  s.source_files = 'iOS-APM/Classes/**/*.swift'
+  s.swift_version = '5.0'
+  s.module_name   = 'BRAPM'
+  
+  s.default_subspec = 'Global', 'Crash'
+  
+  s.subspec "Global" do |ss|
+    ss.source_files  = 'iOS-APM/Classes/Global/*.{swift,h}'
+    ss.framework  = 'Foundation'
+    ss.dependency 'ThreadBacktrace'
+  end
+  
+  s.subspec "Crash" do |ss|
+    ss.source_files  = 'iOS-APM/Classes/Crash/**/*.{swift,h}'
+#    ss.private_header_files = 'iOS-APM/Classes/Crash/**/*.h'
+    ss.framework  = 'Foundation'
+  end
   
   # s.resource_bundles = {
   #   'iOS-APM' => ['iOS-APM/Assets/*.png']
   # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
   
-   s.dependency 'ThreadBacktrace'
    s.dependency 'GodEye'
    
 end
