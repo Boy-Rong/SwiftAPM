@@ -241,13 +241,13 @@
 				"${PODS_ROOT}/Target Support Files/Pods-iOS-APM_Example/Pods-iOS-APM_Example-frameworks.sh",
 				"${PODS_ROOT}/LookinServer/LookinServer.framework",
 				"${BUILT_PRODUCTS_DIR}/ThreadBacktrace/ThreadBacktrace.framework",
-				"${BUILT_PRODUCTS_DIR}/iOS-APM/BRAPM.framework",
+				"${BUILT_PRODUCTS_DIR}/iOS-APM/SwiftAPM.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LookinServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ThreadBacktrace.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BRAPM.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftAPM.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

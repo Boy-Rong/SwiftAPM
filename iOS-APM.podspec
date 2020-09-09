@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.summary          = 'A short description of iOS-APM.'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+iOS APM 轮子 Swift 实现
                        DESC
 
   s.homepage         = 'https://github.com/Boy-Rong/iOS-APM'
@@ -22,7 +22,7 @@ TODO: Add long description of the pod here.
   
   s.ios.deployment_target = '8.0'
   s.swift_version = '5.0'
-  s.module_name   = 'BRAPM'
+  s.module_name   = 'SwiftAPM'
   
   s.default_subspec = 'Global', 'Crash'
   
