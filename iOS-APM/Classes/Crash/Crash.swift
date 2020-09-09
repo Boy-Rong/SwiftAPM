@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import ThreadBacktrace
 import Darwin
+import ThreadBacktrace
 
 // MARK: - Type
 typealias SignalClosure = (@convention(c) (Int32, UnsafeMutablePointer<__siginfo>?, UnsafeMutableRawPointer?) -> Void)
@@ -97,7 +97,8 @@ struct SignalHandler: CrashHandlerabel {
         // 先处理自己 handle
         if Crash.isOpen, let signal = Crash.Signal(rawValue: signal) {
             // 获取当前线程堆栈
-            let callStack = BacktraceOfCurrentThread().info()
+            let callStack = BacktraceOfCurrentThread().reduce("") { $0 + $1 }
+                        
             let reason = "Signal \(signal.name)(\(signal)) was raised.\n"
 
             let model = Crash.Data(type:.signal,
@@ -135,6 +136,7 @@ struct SignalHandler: CrashHandlerabel {
             // 保存旧的 signal Handler
             app_old_signalHandler[signal] = oldHandler
         }
+        
     }
     
     static func clearCrashHandler() {

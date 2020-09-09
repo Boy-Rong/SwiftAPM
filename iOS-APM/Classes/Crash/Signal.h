@@ -5,7 +5,8 @@
 //  Created by 荣恒 on 2020/9/7.
 //
 
-//#include <signal.h>
+#include <sys/signal.h>
+#include <objc/objc.h>
  
 typedef void (*SA_SIGACTION)(int, struct __siginfo *, void *);
 
@@ -23,6 +24,6 @@ SA_SIGACTION _sa_sigaction(struct sigaction action) {
     if (!action.sa_sigaction) {
         return NULL;
     }
-    
+
     return action.sa_sigaction;
 }
