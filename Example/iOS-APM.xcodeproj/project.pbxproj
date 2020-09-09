@@ -239,43 +239,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-iOS-APM_Example/Pods-iOS-APM_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ANREye/ANREye.framework",
-				"${BUILT_PRODUCTS_DIR}/ASLEye/ASLEye.framework",
-				"${BUILT_PRODUCTS_DIR}/AppBaseKit/AppBaseKit.framework",
-				"${BUILT_PRODUCTS_DIR}/AppSwizzle/AppSwizzle.framework",
-				"${BUILT_PRODUCTS_DIR}/AssistiveButton/AssistiveButton.framework",
-				"${BUILT_PRODUCTS_DIR}/CrashEye/CrashEye.framework",
-				"${BUILT_PRODUCTS_DIR}/ESPullToRefresh/ESPullToRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/FileBrowser/FileBrowser.framework",
-				"${BUILT_PRODUCTS_DIR}/GodEye/GodEye.framework",
-				"${BUILT_PRODUCTS_DIR}/LeakEye/LeakEye.framework",
-				"${BUILT_PRODUCTS_DIR}/Log4G/Log4G.framework",
 				"${PODS_ROOT}/LookinServer/LookinServer.framework",
-				"${BUILT_PRODUCTS_DIR}/NetworkEye.swift/NetworkEye.framework",
-				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
-				"${BUILT_PRODUCTS_DIR}/SwViewCapture/SwViewCapture.framework",
-				"${BUILT_PRODUCTS_DIR}/SystemEye/SystemEye.framework",
 				"${BUILT_PRODUCTS_DIR}/ThreadBacktrace/ThreadBacktrace.framework",
 				"${BUILT_PRODUCTS_DIR}/iOS-APM/BRAPM.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ANREye.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ASLEye.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppBaseKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppSwizzle.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AssistiveButton.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CrashEye.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESPullToRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FileBrowser.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GodEye.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LeakEye.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log4G.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LookinServer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NetworkEye.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwViewCapture.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SystemEye.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ThreadBacktrace.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BRAPM.framework",
 			);
@@ -422,14 +392,17 @@
 			baseConfigurationReference = 10F3544D63D465CCE8D03A0F /* Pods-iOS-APM_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = L2V5F2RVQ2;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				INFOPLIST_FILE = "iOS-APM/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = cn.baodianjiaoyu.ios.jiaoshizigezheng;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.runtu.app.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development cn.baodianjiaoyu.ios.jiaoshizigezheng";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development cn.runtu.app.ios";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -440,14 +413,17 @@
 			baseConfigurationReference = 6714EBDAA6DCF0C80507B957 /* Pods-iOS-APM_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = L2V5F2RVQ2;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				INFOPLIST_FILE = "iOS-APM/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = cn.baodianjiaoyu.ios.jiaoshizigezheng;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.runtu.app.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development cn.baodianjiaoyu.ios.jiaoshizigezheng";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development cn.runtu.app.ios";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};

@@ -1,123 +1,33 @@
 PODS:
-  - ANREye (1.2.0)
-  - AppBaseKit (1.0.1)
-  - AppSwizzle (1.3.1)
-  - ASLEye (1.2.0)
-  - AssistiveButton (1.2.0)
-  - CrashEye (1.2.0)
-  - ESPullToRefresh (2.9.3)
-  - FileBrowser (1.0.0)
-  - GodEye (1.2.0):
-    - ANREye
-    - AppBaseKit
-    - AppSwizzle
-    - ASLEye
-    - AssistiveButton
-    - CrashEye
-    - ESPullToRefresh
-    - FileBrowser
-    - LeakEye
-    - Log4G
-    - NetworkEye.swift
-    - SQLite.swift
-    - SwViewCapture
-    - SystemEye
   - iOS-APM (0.1.0):
     - iOS-APM/Crash (= 0.1.0)
     - iOS-APM/Global (= 0.1.0)
   - iOS-APM/Crash (0.1.0)
   - iOS-APM/Global (0.1.0):
     - ThreadBacktrace
-  - LeakEye (1.2.0):
-    - AppSwizzle (~> 1.3.1)
-  - Log4G (0.3.0)
   - LookinServer (1.0.0)
-  - NetworkEye.swift (1.2.0):
-    - AppSwizzle (~> 1.3.1)
-  - SQLite.swift (0.12.2):
-    - SQLite.swift/standard (= 0.12.2)
-  - SQLite.swift/standard (0.12.2)
-  - SwViewCapture (1.0.6)
-  - SystemEye (0.3.0)
   - ThreadBacktrace (0.1.3)
 
 DEPENDENCIES:
-  - ANREye (from `../../EyePod/ANREye`)
-  - AppBaseKit (from `../../EyePod/AppBaseKit`)
-  - AppSwizzle (from `../../EyePod/AppSwizzle`)
-  - ASLEye (from `../../EyePod/ASLEye`)
-  - AssistiveButton (from `../../EyePod/AssistiveButton`)
-  - CrashEye (from `../../EyePod/CrashEye`)
-  - ESPullToRefresh
-  - FileBrowser (from `../../EyePod/FileBrowser`)
-  - GodEye (from `../../GodEye`)
   - iOS-APM (from `../`)
-  - LeakEye (from `../../EyePod/LeakEye`)
-  - Log4G (from `../../EyePod/Log4G`)
   - LookinServer
-  - NetworkEye.swift (from `../../EyePod/NetworkEye`)
-  - SQLite.swift
-  - SwViewCapture
-  - SystemEye (from `../../EyePod/SystemEye`)
   - ThreadBacktrace (from `../../ThreadBacktrace`)
 
 SPEC REPOS:
   trunk:
-    - ESPullToRefresh
     - LookinServer
-    - SQLite.swift
-    - SwViewCapture
 
 EXTERNAL SOURCES:
-  ANREye:
-    :path: "../../EyePod/ANREye"
-  AppBaseKit:
-    :path: "../../EyePod/AppBaseKit"
-  AppSwizzle:
-    :path: "../../EyePod/AppSwizzle"
-  ASLEye:
-    :path: "../../EyePod/ASLEye"
-  AssistiveButton:
-    :path: "../../EyePod/AssistiveButton"
-  CrashEye:
-    :path: "../../EyePod/CrashEye"
-  FileBrowser:
-    :path: "../../EyePod/FileBrowser"
-  GodEye:
-    :path: "../../GodEye"
   iOS-APM:
     :path: "../"
-  LeakEye:
-    :path: "../../EyePod/LeakEye"
-  Log4G:
-    :path: "../../EyePod/Log4G"
-  NetworkEye.swift:
-    :path: "../../EyePod/NetworkEye"
-  SystemEye:
-    :path: "../../EyePod/SystemEye"
   ThreadBacktrace:
     :path: "../../ThreadBacktrace"
 
 SPEC CHECKSUMS:
-  ANREye: 6170ef2a107aa6b5c2a902f7284edbc65c954ffe
-  AppBaseKit: eb4461b3ab029cb9c870eab2dfebad57973e0317
-  AppSwizzle: db36e436f56110d93e5ae0147683435df593cabc
-  ASLEye: f0ebb668dc7f0c1d45b8ad250e6139e1c130dcc3
-  AssistiveButton: eb9dced394fcdee4acdd5c1b63e8846ab72f6d37
-  CrashEye: 89d1ca174f0ef3ceeb27152f578c0a61667ba799
-  ESPullToRefresh: 0d68daa602b343c81753a1b95e09fd0bfcddfd40
-  FileBrowser: 42fe0e5dbb9602f13c6f7f742f4a4193b018eafd
-  GodEye: bd756cf1c47d86e9f43e6af4af7b0858e7d6c0ab
   iOS-APM: c0f123180f0dff6a89bc12c1942b900130ed7f7f
-  LeakEye: 2382ea37ddb10cda7556dbe541b81e0b4df7fdcb
-  Log4G: b05af86e6a876d911d97dca38f88e91eec7c3ebc
   LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
-  NetworkEye.swift: c9d1750edd5e11863db3029ac7eddae299676cf4
-  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
-  SwViewCapture: edf1ea74e164f47af005fbdfdc6fc18ec373ec69
-  SystemEye: 06449d1fab0256231021e83789259a42d69689f5
-  ThreadBacktrace: dda685730ac100e2639a6e3be1d2845c1c0ffe7a
+  ThreadBacktrace: 34cd6d652d53898fcfcb9922d4f061c84ea9723c
 
-PODFILE CHECKSUM: d3da0aeef3b958336215a57e7539956042bf3e84
+PODFILE CHECKSUM: 65c70244bf1fc9fc833c5bfa3ffccd81efde5f9e
 
 COCOAPODS: 1.8.4

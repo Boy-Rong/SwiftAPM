@@ -34,7 +34,6 @@ TODO: Add long description of the pod here.
   
   s.subspec "Crash" do |ss|
     ss.source_files  = 'iOS-APM/Classes/Crash/**/*.{swift,h}'
-#    ss.private_header_files = 'iOS-APM/Classes/Crash/**/*.h'
     ss.framework  = 'Foundation'
   end
   

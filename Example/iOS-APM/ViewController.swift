@@ -8,7 +8,6 @@
 
 import UIKit
 import BRAPM
-import Log4G
 import Darwin
 
 // MARK: - ViewController
@@ -24,13 +23,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Log4G.log("just log")
-        
-        DispatchQueue.global().async {
-            Log4G.warning("just warning")
-        }
-        
-        Log4G.error("just error")
+
     }
     
     override func viewWillLayoutSubviews() {
@@ -96,8 +89,10 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let model = self.sections[indexPath.section].model[indexPath.row]
-        model.action()
+//        let model = self.sections[indexPath.section].model[indexPath.row]
+//        model.action()
+        print("------------->")
+        kill(getpid(), SIGTRAP)
     }
 }
 
