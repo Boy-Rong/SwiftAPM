@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'iOS-APM_Example' do
-  pod 'iOS-APM', :path => '../'
+  pod 'SwiftAPM', :path => '../'
   pod 'ThreadBacktrace', :path => '../../ThreadBacktrace'
   
 #  pod 'GodEye', :path => '../../GodEye'

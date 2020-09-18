@@ -1,16 +1,16 @@
 PODS:
-  - iOS-APM (0.1.0):
-    - iOS-APM/Crash (= 0.1.0)
-    - iOS-APM/Global (= 0.1.0)
-  - iOS-APM/Crash (0.1.0)
-  - iOS-APM/Global (0.1.0):
-    - ThreadBacktrace
   - LookinServer (1.0.0)
+  - SwiftAPM (0.1.0):
+    - SwiftAPM/Crash (= 0.1.0)
+    - SwiftAPM/Global (= 0.1.0)
+  - SwiftAPM/Crash (0.1.0)
+  - SwiftAPM/Global (0.1.0):
+    - ThreadBacktrace
   - ThreadBacktrace (0.1.4)
 
 DEPENDENCIES:
-  - iOS-APM (from `../`)
   - LookinServer
+  - SwiftAPM (from `../`)
   - ThreadBacktrace (from `../../ThreadBacktrace`)
 
 SPEC REPOS:
@@ -18,16 +18,16 @@ SPEC REPOS:
     - LookinServer
 
 EXTERNAL SOURCES:
-  iOS-APM:
+  SwiftAPM:
     :path: "../"
   ThreadBacktrace:
     :path: "../../ThreadBacktrace"
 
 SPEC CHECKSUMS:
-  iOS-APM: 9e4933faa5a553bf684ec566ba1626675a2313e2
   LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
+  SwiftAPM: 1f6823a116b79699996e211f5888dd4fad04cf5a
   ThreadBacktrace: 1524ba22d383a0668b64b11c173bc9b11b5b4e60
 
-PODFILE CHECKSUM: 65c70244bf1fc9fc833c5bfa3ffccd81efde5f9e
+PODFILE CHECKSUM: 64c3be66cc2b7761ff304c440a7b4f6a6f911d5e
 
 COCOAPODS: 1.8.4
