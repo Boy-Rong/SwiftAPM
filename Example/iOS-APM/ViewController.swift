@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import BRAPM
+import SwiftAPM
 import Darwin
 
 // MARK: - ViewController
@@ -39,14 +39,12 @@ class ViewController: UIViewController {
         return new
         }()
     
-    fileprivate lazy var sections:[DemoSection] = {
-        var new = [DemoSection]()
-        new.append(DemoModelFactory.aslSection)
-        new.append(DemoModelFactory.crashSection)
-        new.append(DemoModelFactory.networkSection)
-        new.append(DemoModelFactory.anrSection)
-        return new
-    }()
+    private var sections:[DemoSection] = [
+        DemoModelFactory.aslSection,
+        DemoModelFactory.crashSection,
+        DemoModelFactory.networkSection,
+        DemoModelFactory.anrSection
+    ]
 }
 
 extension ViewController : UITableViewDelegate, UITableViewDataSource {
@@ -133,13 +131,15 @@ class DemoModelFactory: NSObject {
         models.append(model)
         
         model = DemoModel(title: "Signal Crash") {
-//            var a = [String]()
-//            _ = a[2]
+            var a = [String]()
+            print(a[2])
             
-            var b: Int? = nil
-            print(b!)
+//            var b: Int? = nil
+//            print(b!)
             
+            // 打开调试lldb: pro hand -p true -s false SIGTRAP
 //            kill(getpid(), SIGABRT)
+//            kill(getpid(), SIGTRAP)
         }
         models.append(model)
         

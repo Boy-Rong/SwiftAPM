@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import BRAPM
+import SwiftAPM
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        BRAPM.Crash.startMonitor()
+        SwiftAPM.Crash.startMonitor()
         
         return true
     }
