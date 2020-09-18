@@ -8,22 +8,5 @@
 #include <sys/signal.h>
 #include <objc/objc.h>
  
-typedef void (*SA_SIGACTION)(int, struct __siginfo *, void *);
-
 /// 判断 sigaction 是否有 sa_sigaction
-BOOL has_sa_sigaction(struct sigaction action) {
-    if (action.sa_sigaction) {
-        return YES;
-    }
-    else {
-        return NO;
-    }
-}
-
-SA_SIGACTION _sa_sigaction(struct sigaction action) {
-    if (!action.sa_sigaction) {
-        return NULL;
-    }
-
-    return action.sa_sigaction;
-}
+BOOL has_sa_sigaction(struct sigaction action);

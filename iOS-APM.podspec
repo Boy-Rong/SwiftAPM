@@ -33,7 +33,7 @@ iOS APM 轮子 Swift 实现
   end
   
   s.subspec "Crash" do |ss|
-    ss.source_files  = 'iOS-APM/Classes/Crash/**/*.{swift,h}'
+    ss.source_files  = 'iOS-APM/Classes/Crash/**/*.{swift,h,c}'
     ss.framework  = 'Foundation'
   end
   

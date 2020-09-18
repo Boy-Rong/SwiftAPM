@@ -17,7 +17,7 @@ public func save(crash: Crash.Data) {
         return
     }
     
-    let filePath = "\(crashPath)/\(date)-\(crash.name).text"
+    let filePath = "\(crashPath)/\(date) \(crash.name).text"
     
     guard
         let data = try? JSONEncoder().encode(crash)
@@ -36,7 +36,7 @@ public func save(crash: Crash.Data) {
 
 public var crashDirectory: String? {
     guard let cachePath = NSSearchPathForDirectoriesInDomains(
-        .cachesDirectory,
+        .documentDirectory,
         .userDomainMask,
         true
     ).first else {
