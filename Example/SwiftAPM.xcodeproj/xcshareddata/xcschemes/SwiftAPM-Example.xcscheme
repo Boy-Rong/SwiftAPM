@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "iOS-APM_Example.app"
-               BlueprintName = "iOS-APM_Example"
-               ReferencedContainer = "container:iOS-APM.xcodeproj">
+               BuildableName = "SwiftAPM_Example.app"
+               BlueprintName = "SwiftAPM_Example"
+               ReferencedContainer = "container:SwiftAPM.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "iOS-APM_Tests.xctest"
-               BlueprintName = "iOS-APM_Tests"
-               ReferencedContainer = "container:iOS-APM.xcodeproj">
+               BuildableName = "SwiftAPM_Tests.xctest"
+               BlueprintName = "SwiftAPM_Tests"
+               ReferencedContainer = "container:SwiftAPM.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -40,33 +40,37 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "iOS-APM_Example.app"
-            BlueprintName = "iOS-APM_Example"
-            ReferencedContainer = "container:iOS-APM.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "iOS-APM_Tests.xctest"
-               BlueprintName = "iOS-APM_Tests"
-               ReferencedContainer = "container:iOS-APM.xcodeproj">
+               BuildableName = "SwiftAPM_Tests.xctest"
+               BlueprintName = "SwiftAPM_Tests"
+               ReferencedContainer = "container:SwiftAPM.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
+            BuildableName = "SwiftAPM_Example.app"
+            BlueprintName = "SwiftAPM_Example"
+            ReferencedContainer = "container:SwiftAPM.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -78,11 +82,13 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "iOS-APM_Example.app"
-            BlueprintName = "iOS-APM_Example"
-            ReferencedContainer = "container:iOS-APM.xcodeproj">
+            BuildableName = "SwiftAPM_Example.app"
+            BlueprintName = "SwiftAPM_Example"
+            ReferencedContainer = "container:SwiftAPM.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -95,9 +101,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "iOS-APM_Example.app"
-            BlueprintName = "iOS-APM_Example"
-            ReferencedContainer = "container:iOS-APM.xcodeproj">
+            BuildableName = "SwiftAPM_Example.app"
+            BlueprintName = "SwiftAPM_Example"
+            ReferencedContainer = "container:SwiftAPM.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

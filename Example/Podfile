@@ -1,6 +1,6 @@
 use_frameworks!
 
-target 'iOS-APM_Example' do
+target 'SwiftAPM_Example' do
   pod 'SwiftAPM', :path => '../'
   pod 'ThreadBacktrace', :path => '../../ThreadBacktrace'
   

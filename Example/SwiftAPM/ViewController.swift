@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  iOS-APM
+//  SwiftAPM
 //
-//  Created by 495929699g@gmail.com on 09/03/2020.
-//  Copyright (c) 2020 495929699g@gmail.com. All rights reserved.
+//  Created by rongheng on 09/18/2020.
+//  Copyright (c) 2020 rongheng. All rights reserved.
 //
 
 import UIKit
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         self.title = "GodEye Feature List"
         self.view.backgroundColor = UIColor.black
         
-        self.view.addSubview(self.tableView)        
+        self.view.addSubview(self.tableView)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -228,3 +228,5 @@ func alert(t:String, _ m:String) {
     alertView.addButton(withTitle: "OK")
     alertView.show()
 }
+
+

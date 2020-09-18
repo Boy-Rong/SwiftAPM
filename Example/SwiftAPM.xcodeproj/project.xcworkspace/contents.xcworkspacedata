@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:iOS-APM.xcodeproj">
+      location = "self:SwiftAPM.xcodeproj">
    </FileRef>
 </Workspace>

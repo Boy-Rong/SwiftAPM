@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint iOS-APM.podspec' to ensure this is a
+# Be sure to run `pod lib lint SwiftAPM.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged

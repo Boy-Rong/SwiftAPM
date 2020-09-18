@@ -1,9 +1,9 @@
-# iOS-APM
+# SwiftAPM
 
-[![CI Status](https://img.shields.io/travis/495929699g@gmail.com/iOS-APM.svg?style=flat)](https://travis-ci.org/495929699g@gmail.com/iOS-APM)
-[![Version](https://img.shields.io/cocoapods/v/iOS-APM.svg?style=flat)](https://cocoapods.org/pods/iOS-APM)
-[![License](https://img.shields.io/cocoapods/l/iOS-APM.svg?style=flat)](https://cocoapods.org/pods/iOS-APM)
-[![Platform](https://img.shields.io/cocoapods/p/iOS-APM.svg?style=flat)](https://cocoapods.org/pods/iOS-APM)
+[![CI Status](https://img.shields.io/travis/rongheng/SwiftAPM.svg?style=flat)](https://travis-ci.org/rongheng/SwiftAPM)
+[![Version](https://img.shields.io/cocoapods/v/SwiftAPM.svg?style=flat)](https://cocoapods.org/pods/SwiftAPM)
+[![License](https://img.shields.io/cocoapods/l/SwiftAPM.svg?style=flat)](https://cocoapods.org/pods/SwiftAPM)
+[![Platform](https://img.shields.io/cocoapods/p/SwiftAPM.svg?style=flat)](https://cocoapods.org/pods/SwiftAPM)
 
 ## Example
 
@@ -13,17 +13,17 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-iOS-APM is available through [CocoaPods](https://cocoapods.org). To install
+SwiftAPM is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'iOS-APM'
+pod 'SwiftAPM'
 ```
 
 ## Author
 
-rongshao, rongheng@mucang.com
+rongheng, rongheng.rh@gmail.com
 
 ## License
 
-iOS-APM is available under the MIT license. See the LICENSE file for more info.
+SwiftAPM is available under the MIT license. See the LICENSE file for more info.
