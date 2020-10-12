@@ -30,12 +30,22 @@ iOS APM 轮子 Swift 实现
     ss.source_files  = 'SwiftAPM/Classes/Global/*.{swift,h}'
     ss.framework  = 'Foundation'
     ss.dependency 'ThreadBacktrace'
+    ss.dependency 'MMKV'
   end
   
   s.subspec "Crash" do |ss|
     ss.source_files  = 'SwiftAPM/Classes/Crash/**/*.{swift,h,c}'
+#    ss.dependency 'SwiftAPM/Global'
     ss.framework  = 'Foundation'
   end
+  
+  s.subspec "ANR" do |ss|
+    ss.source_files  = 'SwiftAPM/Classes/ANR/**/*.{swift,h,c}'
+#    ss.dependency 'SwiftAPM/Global'
+    ss.framework  = 'Foundation'
+  end
+  
+#  s.framework  = 'Foundation', 'UIKit'
   
   # s.resource_bundles = {
   #   'SwiftAPM' => ['SwiftAPM/Assets/*.png']

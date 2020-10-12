@@ -8,6 +8,7 @@
 import Foundation
 import Darwin
 import ThreadBacktrace
+import MMKV
 
 // MARK: - Type
 typealias SignalClosure = (@convention(c) (Int32, UnsafeMutablePointer<__siginfo>?, UnsafeMutableRawPointer?) -> Void)
@@ -51,6 +52,7 @@ struct ExceptionHandler: CrashHandlerabel {
             let name = exteption.name
             let model = Crash.Data(type:.exception,
                                    name:name.rawValue,
+                                   date: currentZoneDate,
                                    reason:reason,
                                    appinfo:App.info,
                                    callStack:callStack)
@@ -103,6 +105,7 @@ struct SignalHandler: CrashHandlerabel {
 
             let model = Crash.Data(type:.signal,
                                    name:signal.name,
+                                   date: currentZoneDate,
                                    reason:reason,
                                    appinfo:App.info,
                                    callStack:callStack)
@@ -194,6 +197,18 @@ final public class Crash {
         crashHandlers.forEach {
             $0.registerCrashHandler()
         }
+        
+        // init MMKV
+        let cachePathList = NSSearchPathForDirectoriesInDomains(
+            .documentDirectory,
+            .userDomainMask,
+            true
+        )
+        guard let cachePath = cachePathList.first else {
+            return
+        }
+        let result = MMKV.initialize(rootDir: "\(cachePath)/Crash")
+        log(result)
     }
     
     /// 停止监控
@@ -265,6 +280,7 @@ extension Crash {
     public struct Data: Codable {
         public var type: Type
         public var name: String
+        public var date: String
         public var reason: String
         public var appinfo: String
         public var callStack: String
