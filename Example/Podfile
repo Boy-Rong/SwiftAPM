@@ -16,7 +16,7 @@ target 'SwiftAPM_Example' do
 #  pod "SystemEye", :path => '../../EyePod/SystemEye'
 #  pod "NetworkEye.swift", :path => '../../EyePod/NetworkEye'
 #  pod "LeakEye", :path => '../../EyePod/LeakEye'
-#  pod 'PLCrashReporter', :path => '../../plcrashreporter'
+#
 #  pod "FileBrowser", :path => '../../EyePod/FileBrowser'
 #  pod "SwViewCapture"
 #  pod "SQLite.swift"

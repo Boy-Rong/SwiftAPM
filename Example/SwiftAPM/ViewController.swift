@@ -87,10 +87,8 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let model = self.sections[indexPath.section].model[indexPath.row]
-//        model.action()
-        print("------------->")
-        kill(getpid(), SIGTRAP)
+        let model = self.sections[indexPath.section].model[indexPath.row]
+        model.action()
     }
 }
 
@@ -125,20 +123,27 @@ class DemoModelFactory: NSObject {
     static var crashSection: DemoSection {
         var models = [DemoModel]()
         var model = DemoModel(title: "Exception Crash") {
-            let array = NSArray()
-            _ = array[2]
+//            let array = NSArray()
+//            _ = array[2]
+            
+//            let window = UIWindow(frame:UIScreen.main.bounds)
+//            SwiftAPM.openSandBox(window)
+            
+            CrashBrowser.share.openCrashList()
         }
         models.append(model)
         
         model = DemoModel(title: "Signal Crash") {
             var a = [String]()
             print(a[2])
-            
+//
 //            var b: Int? = nil
 //            print(b!)
             
+//            var array = NSArray(array: [1,2])
+//            print(array[2])
+            
             // 打开调试lldb: pro hand -p true -s false SIGTRAP
-//            kill(getpid(), SIGABRT)
 //            kill(getpid(), SIGTRAP)
         }
         models.append(model)
@@ -228,5 +233,3 @@ func alert(t:String, _ m:String) {
     alertView.addButton(withTitle: "OK")
     alertView.show()
 }
-
-

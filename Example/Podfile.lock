@@ -1,10 +1,14 @@
 PODS:
   - LookinServer (1.0.0)
+  - MMKV (1.2.2):
+    - MMKVCore (~> 1.2.2)
+  - MMKVCore (1.2.2)
   - SwiftAPM (0.1.0):
     - SwiftAPM/Crash (= 0.1.0)
     - SwiftAPM/Global (= 0.1.0)
   - SwiftAPM/Crash (0.1.0)
   - SwiftAPM/Global (0.1.0):
+    - MMKV
     - ThreadBacktrace
   - ThreadBacktrace (0.1.4)
 
@@ -16,6 +20,8 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - LookinServer
+    - MMKV
+    - MMKVCore
 
 EXTERNAL SOURCES:
   SwiftAPM:
@@ -25,9 +31,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
-  SwiftAPM: 1f6823a116b79699996e211f5888dd4fad04cf5a
+  MMKV: b14909757d8b70e2aa89ff1c6d56a7b239e10a29
+  MMKVCore: 6225324fe5006026bc86ef8641d567e00c6582f3
+  SwiftAPM: 89f13be798521a198c95f922bbc7bb06431e4be2
   ThreadBacktrace: 1524ba22d383a0668b64b11c173bc9b11b5b4e60
 
-PODFILE CHECKSUM: 08a05a48777213f12bb7bcf349df241c849b1a4b
+PODFILE CHECKSUM: 9b9081baa464aceaf966656d7f96c03deb60c4b3
 
 COCOAPODS: 1.8.4
