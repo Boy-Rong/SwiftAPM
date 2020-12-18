@@ -7,8 +7,9 @@
 //
 
 import UIKit
-import SwiftAPM
 import Darwin
+import SwiftAPM
+import ThreadBacktrace
 
 // MARK: - ViewController
 class ViewController: UIViewController {
@@ -118,6 +119,11 @@ class DemoSection: NSObject {
     }
 }
 
+func testCallStack() {
+    let callStack = BacktraceOfCurrentThread().reduce("") { $0 + $1 }
+    log(callStack)
+}
+
 class DemoModelFactory: NSObject {
     
     static var crashSection: DemoSection {
@@ -125,11 +131,13 @@ class DemoModelFactory: NSObject {
         var model = DemoModel(title: "Exception Crash") {
 //            let array = NSArray()
 //            _ = array[2]
-            
+//
 //            let window = UIWindow(frame:UIScreen.main.bounds)
 //            SwiftAPM.openSandBox(window)
             
-            CrashBrowser.share.openCrashList()
+//            CrashBrowser.share.openCrashList()
+            
+            testCallStack()
         }
         models.append(model)
         

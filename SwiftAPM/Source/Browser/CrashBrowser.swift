@@ -11,19 +11,12 @@ public final class CrashBrowser {
     
     public static let share : CrashBrowser = CrashBrowser()
     
-    private init() {
-        
-    }
+    private init() { }
     
     /// 打开 Crash List
     public func openCrashList() {
-        if Thread.isMainThread {
-            handleOepn()
-        }
-        else {
-            DispatchQueue.main.async {
-                self.handleOepn()
-            }
+        mainThread {
+            self.handleOepn()
         }
     }
     
@@ -31,7 +24,9 @@ public final class CrashBrowser {
         let oldKeyWindow = UIApplication.shared.keyWindow
         let window = UIWindow(frame:UIScreen.main.bounds)
         
-        let listController = CrashBrowserListController(dataSource: getAllCrash())
+        let allCrash : [Crash.Data] = Storage.shared.values(for: .Crash)
+        
+        let listController = CrashBrowserListController(dataSource: allCrash)
         listController.closeTapAction = {
             window.isHidden = true
             oldKeyWindow?.makeKeyAndVisible()

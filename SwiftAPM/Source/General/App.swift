@@ -8,14 +8,12 @@
 import Foundation
 import Darwin
 
-
-
 public struct App {
-    private init() { }
+    private init() {}
     
     /// 杀掉当前进程
     public static func kill() {
-        killApp()
+        Darwin.kill(getpid(), SIGKILL)
     }
     
     public static var info : String {
@@ -28,9 +26,4 @@ public struct App {
         return "App: \(displayName) \(shortVersion)(\(version))\n" +
             "Device:\(deviceModel)\n" + "OS Version:\(systemName) \(systemVersion)"
     }
-}
-
-/// 杀掉当前进程
-private func killApp() {
-    kill(getpid(), SIGKILL)
 }
