@@ -2,12 +2,12 @@ PODS:
   - MMKV (1.2.6):
     - MMKVCore (~> 1.2.6)
   - MMKVCore (1.2.6)
-  - SwiftAPM/Crash (0.1.0):
+  - SwiftAPM/Crash (0.2.0):
     - SwiftAPM/General
     - SwiftAPM/Storage
     - ThreadBacktrace
-  - SwiftAPM/General (0.1.0)
-  - SwiftAPM/Storage (0.1.0):
+  - SwiftAPM/General (0.2.0)
+  - SwiftAPM/Storage (0.2.0):
     - MMKV
     - SwiftAPM/General
   - ThreadBacktrace (0.2.0)
@@ -30,7 +30,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   MMKV: 27f6b9e34849e77e78c5a1cc8f7f513e37f5fa15
   MMKVCore: c301b04fd2ab9957e6e4d4465b9b60e443b0bb6b
-  SwiftAPM: 4dedb0e9eca6166585154fc4f338a18133be16df
+  SwiftAPM: 33b80bf1a549713c4c59a8b7e62bf33a4185d3de
   ThreadBacktrace: acfd2e005013a814d157d17f4f543da55372f12c
 
 PODFILE CHECKSUM: 9c6d0e357e7f7845c1b5109376a2137ec8e73c66

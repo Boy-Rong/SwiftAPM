@@ -49,6 +49,10 @@ final public class Storage {
         let crashPath = "\(NSHomeDirectory())/Documents/ANR"
         return MMKV(mmapID: "com.swift.apm.anr", rootPath: crashPath)!
     }()
+    
+    func initialize() {
+        MMKV.initialize(rootDir: "\(NSHomeDirectory())/Documents")
+    }
 }
 
 extension Storage {
@@ -109,7 +113,6 @@ extension Storage {
         case custom(String)
     }
 }
-
 
 
 //MARK: mmap demo

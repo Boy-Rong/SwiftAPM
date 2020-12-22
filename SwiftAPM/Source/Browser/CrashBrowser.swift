@@ -7,6 +7,10 @@
 
 import UIKit
 
+extension Notification.Name {
+    public static let OpenCrashBrowser = Notification.Name("OpenCrashBrowser")
+}
+
 public final class CrashBrowser {
     
     public static let share : CrashBrowser = CrashBrowser()
@@ -22,20 +26,22 @@ public final class CrashBrowser {
     
     func handleOepn() {
         let oldKeyWindow = UIApplication.shared.keyWindow
+        
         let window = UIWindow(frame:UIScreen.main.bounds)
+        window.backgroundColor = .white
         
         let allCrash : [Crash.Data] = Storage.shared.values(for: .Crash)
-        
         let listController = CrashBrowserListController(dataSource: allCrash)
         listController.closeTapAction = {
             window.isHidden = true
-            oldKeyWindow?.makeKeyAndVisible()
+            window.removeFromSuperview()
         }
 
         // show
         window.rootViewController = UINavigationController(rootViewController: listController)
         window.isHidden = false
-        window.makeKeyAndVisible()
+        
+        oldKeyWindow?.addSubview(window)
     }
 }
 

@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+extension Notification.Name {
+    public static let OpenSandBoxBrowser = Notification.Name("OpenSandBoxBrowser")
+}
+
 public func openSandBox(_ window: UIWindow) {
     let oldKeyWindow = UIApplication.shared.keyWindow
     
